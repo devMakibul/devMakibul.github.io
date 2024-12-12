@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- 
+          - primary meta tags
+        -->
+        <title>Makibul</title>
+        <meta name="title" content="Makibul">
+        <meta content="Web Developer painting the canvas of the internet." name="description">
+        <meta content="website" property="og:type">
+        <meta content="https://makibul.com" property="og:url">
+        <meta content="Makibul Web Developer" property="og:title">
+        <meta content="Web Developer painting the canvas of the internet." property="og:description">
+        <meta content="/assets/meta-banner.png" property="og:image">
+        <meta content="summary_large_image" property="twitter:card">
+        <meta content="@devMakibul" name="twitter:site">
+        <meta content="@devMakibul" name="twitter:creator">
+        <meta content="https://makibul.com" property="twitter:url">
+        <meta content="Makibul Web Developer" property="twitter:title">
+        <meta content="Web Developer painting the canvas of the internet." property="twitter:description">
+        <meta content="/assets/meta-banner.png" property="twitter:image">
+        <link href="/assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+        <link href="/assets/favicon.ico" rel="shortcut icon" sizes="any" type="image/png">
+        <link href="/assets/manifest.json" rel="manifest">
+
+        <script src="https://beamanalytics.b-cdn.net/beam.min.js" data-token="c14842ae-4407-4257-837d-42328a45648b"
+            async=""></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+        <title>Makibul's Portfolio</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Inter Tight', Arial, sans-serif;
+                font-weight: 400;
+                overflow-x: hidden;
+                padding: 10px;
+                font-size: 1.2rem;
+            }
+
+            b,
+            strong {
+                font-weight: 600;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-family: 'Inter Tight', Arial, sans-serif;
+                font-weight: 500;
+                /* Ensures headings are bold */
+            }
+
+            .container {
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 20px;
+                border-radius: 12px;
+            }
+
+            header {
+                margin-bottom: 30px;
+            }
+
+            header img {
+                width: 350px;
+                height: 350px;
+                float: right;
+                margin-top: -95px;
+                margin-right: -95px;
+            }
+
+            header h1 {
+                margin: 20px 0 10px;
+            }
+
+            header p {
+                font-size: 1.2em;
+                color: #555;
+                margin: 0;
+            }
+
+            hr {
+                height: 6px;
+                background-image: url(/assets/divider.svg);
+                background-repeat: repeat-x;
+                background-position: left center;
+                border-top: none;
+                border-right: none;
+                border-bottom: none;
+                border-left: none;
+                margin-top: 20px;
+            }
+
+            .section {
+                margin-bottom: 30px;
+            }
+
+            .section h2 {
+                margin-bottom: 10px;
+                border-bottom: 2px solid #333;
+                display: inline-block;
+            }
+
+            .education-timeline {
+                list-style: none;
+                padding: 0;
+                display: grid;
+                grid-template-columns: 1fr 3fr;
+                gap: 10px;
+                align-items: center;
+            }
+
+            .education-timeline li {
+                display: contents;
+            }
+
+            .education-timeline .year {
+                font-weight: 500;
+                place-self: flex-start;
+            }
+
+            .education-timeline .college {
+                text-align: left;
+                font-weight: 400;
+            }
+
+
+            .projects {
+                display: flex;
+                gap: 20px;
+                flex-direction: column;
+                margin-top: 10px;
+            }
+
+            .project {
+                background-color: #fff;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                flex: 1 1 calc(50% - 20px);
+                box-sizing: border-box;
+                overflow: hidden;
+            }
+
+            .thumbnail-wrapper {
+                position: relative;
+                overflow: hidden;
+                padding-top: 56.25%;
+            }
+
+            .project img {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                object-fit: cover;
+            }
+
+            .project h3 {
+                margin-top: 10px;
+                font-size: 1.2em;
+                padding-inline: 15px;
+            }
+
+            .project p {
+                margin: 5px 0 15px;
+                padding-inline: 15px;
+            }
+
+            .project a {
+                font-weight: 600;
+                text-decoration: underline;
+                color: #000;
+            }
+
+            .social-links {
+                margin-inline: 1px;
+            }
+
+
+
+            @media (max-width: 600px) {
+
+                body {
+                    font-size: 1rem;
+                }
+
+                header img {
+                    width: 200px;
+                    height: 200px;
+                    margin-top: -75px;
+                    margin-right: -60px;
+                }
+
+                .project {
+                    flex: 1 1 100%;
+                }
+            }
+
+            @media (max-width: 330px) {
+
+                header {
+                    text-align: center;
+                }
+
+                header img {
+                    width: 150px;
+                    height: 150px;
+                    margin-top: 0;
+                    margin-right: 0;
+                    float: none;
+                }
+            }
+
+            .social-links a {
+                margin-right: 10px;
+                text-decoration: none;
+                color: #000;
+            }
+
+            footer {
+                text-align: center;
+                margin-top: 30px;
+                padding-top: 20px;
+                border-top: 1px solid #ddd;
+            }
+
+            footer p {
+                margin: 5px 0;
+            }
+        </style>
+    </head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="/assets/portrait.png" alt="Makibul's portrait">
+            <h1>Makibul</h1>
+            <p>A web developer painting the canvas of the internet</p>
+            <hr>
+        </header>
+
+        <div class="section">
+            <h2>About Me</h2>
+            <p>I'm a developer based in India. When I'm not doing my academic work, I enjoy programming and exploring
+                new technologies. I have a solid foundation in <strong>HTML</strong>, <strong>CSS</strong>,
+                <strong>JavaScript</strong>, <strong>Bootstrap</strong>, and <strong>jQuery</strong>. Currently, I'm
+                learning <strong>C language</strong> and advanced JavaScript concepts to take my skills to the next
+                level and build
+                more dynamic projects.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Education</h2>
+            <ul class="education-timeline">
+                <li>
+                    <span class="year">2024-28</span>
+                    <span class="college">Dhemaji Engineering College, India</span>
+                </li>
+                <li>
+                    <span class="year">2020-22</span>
+                    <span class="college">Ajmal Super 40, Hojai, Assam</span>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="section">
+            <h2>Projects</h2>
+            <div class="projects">
+                <div class="project">
+                    <div class="thumbnail-wrapper">
+                        <img src="/assets/project1.png" alt="PashaPuma Design Thumbnail">
+                    </div>
+                    <h3>PashaPuma Design</h3>
+                    <p>PashaPuma Design is a custom-built website created with HTML, CSS, JavaScript, and homemade
+                        MD3-inspired UI elements for the web. It showcases creative icon packs,
+                        wallpapers, and templates, along with guides on mobile customization.
+                        <a href="https://pashapumadesign.com/" target="_blank">Visit Site</a>
+                    </p>
+                </div>
+                <div class="project">
+                    <div class="thumbnail-wrapper">
+                        <img src="/assets/project2.png" alt="WhatsApp Analyzer Thumbnail">
+                    </div>
+                    <h3>WhatChat Analyzer</h3>
+                    <p>This project is a chat analysis tool designed for analyzing WhatsApp chat logs exported as TXT
+                        files. Users can upload their chat files and view insights into message statistics, word and
+                        emoji usage, and activity trends. The tool processes chaotic text and presents it in a clear,
+                        user-friendly interface resembling a real WhatsApp chat. It is compatible with both iOS and
+                        Android versions of TXT files, offering seamless analysis across platforms.
+                        <a href="https://makibul.com/whatschat/" target="_blank">Visit Site</a>
+                    </p>
+                </div>
+                <div class="project">
+                    <div class="thumbnail-wrapper">
+                        <img src="/assets/project3.png" alt="Attendance Tracker Thumbnail">
+                    </div>
+                    <h3>Personal Attendance Tracker</h3>
+                    <p>This tool is developed to help track my academic attendance. It features a dynamic calendar
+                        interface, allowing me to mark attendance for each subject, and
+                        easily navigate through different months. It includes functionalities like adding and removing
+                        subjects for specific dates, viewing subject-wise attendance stats, and maintaining data
+                        locally in the browser. While currently for personal use, I plan to make it available for public
+                        use in the future.
+                        <a href="https://makibul.com/attendance/" target="_blank">Visit Site</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Connect</h2>
+            <p class="social-links">
+                <a href="https://github.com/devMakibul" target="_blank">GitHub</a>
+                <a href="https://bsky.app/profile/makibul.com" target="_blank">Bluesky</a>
+                <a href="https://x.com/devMakibul" target="_blank">Twitter/X</a>
+                <a href="mailto:contactmakibul@gmail.com">Email</a>
+            </p>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Makibul. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

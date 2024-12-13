@@ -8,9 +8,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- 
-          - primary meta tags
-        -->
         <title>Makibul</title>
         <meta name="title" content="Makibul">
         <meta content="Web Developer painting the canvas of the internet." name="description">
@@ -48,9 +45,7 @@
             body {
                 font-family: 'Inter Tight', Arial, sans-serif;
                 font-weight: 400;
-                overflow-x: hidden;
-                padding: 10px;
-                font-size: 1.2rem;
+                font-size: 1.3rem;
             }
 
             b,
@@ -66,14 +61,13 @@
             h6 {
                 font-family: 'Inter Tight', Arial, sans-serif;
                 font-weight: 500;
-                /* Ensures headings are bold */
             }
 
             .container {
                 max-width: 600px;
                 margin: 0 auto;
-                padding: 20px;
-                border-radius: 12px;
+                padding: 30px 20px 0;
+                overflow-x: unset;
             }
 
             header {
@@ -191,17 +185,28 @@
                 text-decoration: underline;
                 color: #000;
             }
-
-            .social-links {
-                margin-inline: 1px;
+            
+            
+            @media (max-width: 750px) {
+                body {
+                    font-size: 1.25rem;
+                }
+                
+                .container {
+                    overflow-x: hidden;
+                }
+                header img {
+                    width: 250px;
+                    height: 250px;
+                    margin-right: 0px;
+                }
             }
-
 
 
             @media (max-width: 600px) {
 
                 body {
-                    font-size: 1rem;
+                    font-size: 1.2rem;
                 }
 
                 header img {
@@ -230,6 +235,11 @@
                     float: none;
                 }
             }
+            
+            .social-links {
+                margin-inline: 1px;
+                
+            }
 
             .social-links a {
                 margin-right: 10px;
@@ -245,7 +255,7 @@
             }
 
             footer p {
-                margin: 5px 0;
+                margin: 5px 0 30px;
             }
         </style>
     </head>

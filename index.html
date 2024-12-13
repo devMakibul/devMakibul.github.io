@@ -51,6 +51,7 @@
             b,
             strong {
                 font-weight: 600;
+                color: #000;
             }
 
             h1,
@@ -114,6 +115,10 @@
                 display: inline-block;
             }
 
+            p {
+                color: #606060;
+            }
+
             .education-timeline {
                 list-style: none;
                 padding: 0;
@@ -137,6 +142,12 @@
                 font-weight: 400;
             }
 
+
+            .projects-wrapper h2 {
+                display: block;
+                text-align: center;
+                border-bottom: none;
+            }
 
             .projects {
                 display: flex;
@@ -180,21 +191,23 @@
                 padding-inline: 15px;
             }
 
-            .project a {
+            .project p a {
                 font-weight: 600;
                 text-decoration: underline;
                 color: #000;
+                display: block;
             }
-            
-            
+
+
             @media (max-width: 750px) {
                 body {
                     font-size: 1.25rem;
                 }
-                
+
                 .container {
                     overflow-x: hidden;
                 }
+
                 header img {
                     width: 250px;
                     height: 250px;
@@ -206,7 +219,7 @@
             @media (max-width: 600px) {
 
                 body {
-                    font-size: 1.2rem;
+                    font-size: 1.1rem;
                 }
 
                 header img {
@@ -214,6 +227,16 @@
                     height: 200px;
                     margin-top: -75px;
                     margin-right: -60px;
+                }
+
+                .education-timeline {
+                    display: block;
+                }
+
+                .education-timeline li {
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 10px;
                 }
 
                 .project {
@@ -235,10 +258,10 @@
                     float: none;
                 }
             }
-            
+
             .social-links {
                 margin-inline: 1px;
-                
+
             }
 
             .social-links a {
@@ -295,7 +318,7 @@
 
         </div>
 
-        <div class="section">
+        <div class="section projects-wrapper">
             <h2>Projects</h2>
             <div class="projects">
                 <div class="project">

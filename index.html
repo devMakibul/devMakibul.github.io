@@ -266,13 +266,21 @@
 
             .social-links {
                 margin-inline: 1px;
-
+                display: flex;
+                flex-wrap: wrap;
+                gap: 5px;
             }
 
             .social-links a {
-                margin-right: 10px;
+                display: flex;
+                align-items: center;
                 text-decoration: none;
                 color: #000;
+            }
+
+            .social-links a img {
+                height: 30px;
+                width: 30px;
             }
 
             footer {
@@ -372,12 +380,12 @@
         <div class="section">
             <h2>Connect</h2>
             <p class="social-links">
-                <a href="https://github.com/devMakibul" target="_blank">GitHub</a>
-                <a href="https://bsky.app/profile/makibul.com" target="_blank">Bluesky</a>
-                <a href="https://t.me/mak1bul" target="_blank">Telegram</a>
-                <a href="https://x.com/devMakibul" target="_blank">X</a>
-                <a rel="me" href="https://mastodon.social/@makibul">Mastodon</a>
-                <a href="mailto:contactmakibul@gmail.com">Email</a>
+                <a href="https://github.com/devMakibul" target="_blank"><img src="/assets/github.svg"></a>
+                <a href="https://bsky.app/profile/makibul.com" target="_blank"><img src="/assets/bluesky.svg"></a>
+                <a href="https://t.me/mak1bul" target="_blank"><img src="/assets/telegram.svg"></a>
+                <a href="https://x.com/devMakibul" target="_blank"><img src="/assets/x.svg"></a>
+                <a rel="me" href="https://mastodon.social/@makibul"><img src="/assets/mastodon.svg"></a>
+                <a href="mailto:contactmakibul@gmail.com"><img src="/assets/email.svg"></a>
             </p>
         </div>
 

@@ -1,404 +1,358 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makibul</title>
+    <meta name="title" content="Makibul">
+    <meta content="A full-stack web developer" name="description">
 
-        <title>Makibul</title>
-        <meta name="title" content="Makibul">
-        <meta content="Web Developer painting the canvas of the internet." name="description">
-        <meta content="website" property="og:type">
-        <meta content="https://makibul.com" property="og:url">
-        <meta content="Makibul Web Developer" property="og:title">
-        <meta content="Web Developer painting the canvas of the internet." property="og:description">
-        <meta content="/assets/meta-banner.png" property="og:image">
-        <meta content="summary_large_image" property="twitter:card">
-        <meta content="@devMakibul" name="twitter:site">
-        <meta content="@devMakibul" name="twitter:creator">
-        <meta content="https://makibul.com" property="twitter:url">
-        <meta content="Makibul Web Developer" property="twitter:title">
-        <meta name="fediverse:creator" content="@makibul@mastodon.social">
-        <meta content="Web Developer painting the canvas of the internet." property="twitter:description">
-        <meta content="/assets/meta-banner.png" property="twitter:image">
-        <link href="/assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
-        <link href="/assets/favicon.ico" rel="shortcut icon" sizes="any" type="image/png">
-        <link href="/assets/manifest.json" rel="manifest">
+    <meta content="website" property="og:type">
+    <meta content="https://makibul.com" property="og:url">
+    <meta content="Makibul | Full-stack Web Developer" property="og:title">
+    <meta content="A full-stack web developer" property="og:description">
+    <meta content="https://makibul.com/assets/meta-banner.png" property="og:image">
+    <meta content="summary_large_image" property="twitter:card">
+    <meta content="@devMakibul" name="twitter:site">
+    <meta content="@devMakibul" name="twitter:creator">
+    <meta content="https://makibul.com" property="twitter:url">
+    <meta content="Makibul | Full-stack Web Developer" property="twitter:title">
+    <meta name="fediverse:creator" content="@makibul@mastodon.social">
+    <meta content="A full-stack web developer" property="twitter:description">
+    <meta content="/assets/meta-banner.png" property="twitter:image">
 
-        <script src="https://beamanalytics.b-cdn.net/beam.min.js" data-token="c14842ae-4407-4257-837d-42328a45648b"
-            async=""></script>
+    <!-- FAVICONS -->
+    <link href="https://makibul.com/assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="https://makibul.com/assets/favicon.ico" rel="shortcut icon" sizes="any" type="image/png">
+    <link href="https://makibul.com/assets/manifest.json" rel="manifest">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap"
-            rel="stylesheet">
-        <title>Makibul's Portfolio</title>
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300..700;1,300..700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 
-            body {
-                font-family: 'Inter Tight', Arial, sans-serif;
-                font-weight: 400;
-                font-size: 1.3rem;
-            }
+    <!-- STYLES -->
+    <link rel="stylesheet" href="https://makibul.com/style.css">
 
-            b,
-            strong {
-                font-weight: 600;
-                color: #000;
-            }
-
-            h1,
-            h2,
-            h3,
-            h4,
-            h5,
-            h6 {
-                font-family: 'Inter Tight', Arial, sans-serif;
-                font-weight: 500;
-            }
-
-            .container {
-                max-width: 600px;
-                margin: 0 auto;
-                padding: 30px 20px 0;
-                overflow-x: unset;
-            }
-
-            header {
-                margin-bottom: 30px;
-            }
-
-            header img {
-                width: 350px;
-                height: 350px;
-                float: right;
-                margin-top: -95px;
-                margin-right: -95px;
-            }
-
-            header h1 {
-                margin: 20px 0 10px;
-            }
-
-            header p {
-                font-size: 1.2em;
-                color: #555;
-                margin: 0;
-            }
-
-            hr {
-                height: 6px;
-                background-image: url(/assets/divider.svg);
-                background-repeat: repeat-x;
-                background-position: left center;
-                border-top: none;
-                border-right: none;
-                border-bottom: none;
-                border-left: none;
-                margin-top: 20px;
-            }
-
-            .section {
-                margin-bottom: 30px;
-            }
-
-            .section h2 {
-                margin-bottom: 10px;
-                border-bottom: 2px solid #333;
-                display: inline-block;
-            }
-
-            p {
-                color: #606060;
-            }
-
-            .education-timeline {
-                list-style: none;
-                padding: 0;
-                display: grid;
-                grid-template-columns: 1fr 3fr;
-                gap: 10px;
-                align-items: center;
-            }
-
-            .education-timeline li {
-                display: contents;
-            }
-
-            .education-timeline .year {
-                font-weight: 500;
-                place-self: flex-start;
-            }
-
-            .education-timeline .college {
-                text-align: left;
-                font-weight: 400;
-            }
-
-            .projects-wrapper {
-                margin-top: 20px;
-            }
-
-            .projects-wrapper h2 {
-                display: block;
-                text-align: center;
-                border-bottom: none;
-                margin-bottom: 20px;
-            }
-
-            .projects {
-                display: flex;
-                gap: 20px;
-                flex-direction: column;
-                margin-top: 10px;
-            }
-
-            .project {
-                background-color: #fff;
-                border: 1px solid #ddd;
-                border-radius: 8px;
-                flex: 1 1 calc(50% - 20px);
-                box-sizing: border-box;
-                overflow: hidden;
-            }
-
-            .thumbnail-wrapper {
-                position: relative;
-                overflow: hidden;
-                padding-top: 56.25%;
-            }
-
-            .project img {
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                top: 0;
-                left: 0;
-                object-fit: cover;
-            }
-
-            .project h3 {
-                margin-top: 10px;
-                font-size: 1.2em;
-                padding-inline: 15px;
-            }
-
-            .project p {
-                margin: 5px 0 15px;
-                padding-inline: 15px;
-            }
-
-            .project p a {
-                font-weight: 600;
-                text-decoration: underline;
-                color: #000;
-                display: block;
-            }
-
-
-            @media (max-width: 750px) {
-                body {
-                    font-size: 1.25rem;
-                }
-
-                .container {
-                    overflow-x: hidden;
-                }
-
-                header img {
-                    width: 250px;
-                    height: 250px;
-                    margin-right: 0px;
-                }
-            }
-
-
-            @media (max-width: 600px) {
-
-                body {
-                    font-size: 1.1rem;
-                }
-
-                header img {
-                    width: 200px;
-                    height: 200px;
-                    margin-top: -75px;
-                    margin-right: -60px;
-                }
-
-                .education-timeline {
-                    display: block;
-                }
-
-                .education-timeline li {
-                    display: flex;
-                    flex-direction: column;
-                    margin-bottom: 10px;
-                }
-
-                .project {
-                    flex: 1 1 100%;
-                }
-            }
-
-            @media (max-width: 330px) {
-
-                header {
-                    text-align: center;
-                }
-
-                header img {
-                    width: 150px;
-                    height: 150px;
-                    margin-top: 0;
-                    margin-right: 0;
-                    float: none;
-                }
-            }
-
-            .social-links {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 15px;
-                justify-content: center;
-            }
-
-            .social-links a {
-                display: flex;
-                align-items: center;
-            }
-
-            .social-links a img {
-                height: 30px;
-                width: 30px;
-            }
-
-            footer {
-                text-align: center;
-                padding-top: 20px;
-            }
-
-            footer p {
-                margin: 5px 0 30px;
-            }
-        </style>
-    </head>
+    <!-- ANALYTICS -->
+    <script src="https://beamanalytics.b-cdn.net/beam.min.js" data-token="c14842ae-4407-4257-837d-42328a45648b" async=""></script>
+</head>
 
 <body>
+
+    <!-- TOP BAR / NAVIGATION -->
+    <nav class="sys-bar">
+        <div class="sys-status">
+            <span class="status-dot"></span>
+            <span class="mono">SYS.ONLINE</span>
+        </div>
+        <div class="sys-controls">
+            <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme (T)">
+                <!-- Sun Icon -->
+                <svg class="icon sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <!-- Moon Icon -->
+                <svg class="icon moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
     <div class="container">
-        <header>
-            <img src="/assets/portrait.webp" alt="Makibul's portrait">
-            <h1>Makibul</h1>
-            <p>A web developer painting the canvas of the internet</p>
-            <hr>
+
+        <!-- HERO SECTION -->
+        <header class="hero-section reveal">
+            <div class="hero-layout">
+                <div class="hero-text">
+                    <div class="cmd-prompt mono">/mo-key-bool/</div>
+                    <h1>Makibul</h1>
+                    <div class="typewriter-container">
+                        <span id="typewriter" class="mono"></span><span class="cursor">_</span>
+                    </div>
+                    <div class="hero-actions">
+                        <button class="btn-primary"
+                            onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">See
+                            projects</button>
+                        <button class="btn-secondary" id="copy-handle" data-handle="contactmakibul@gmail.com">
+                            <span class="mono">cp email</span>
+                            <span class="tooltip">Copied!</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="img-frame">
+                        <img src="https://makibul.com/assets/portrait.webp" alt="Makibul Portrait"
+                            onerror="this.src='https://placehold.co/400x400/1a1a1a/6b8f6b?text=M'">
+                        <div class="corner-accents"></div>
+                    </div>
+                </div>
+            </div>
         </header>
 
-        <div class="section">
-            <h2>About Me</h2>
-            <p>I'm a developer based in India. When I'm not doing my academic work, I enjoy programming and exploring
-                new technologies.
-            </p>
-            <br>
-            <p>
-                I have a solid foundation in <strong>HTML</strong>, <strong>CSS</strong>,
-                <strong>JavaScript</strong>, <strong>Bootstrap</strong>, <strong>jQuery</strong>, <strong>MySQL</strong> and <strong>C</strong>. Currently, I'm
-                learning advanced JavaScript concepts to take my skills to the next
-                level and build
-                more dynamic projects.
-            </p>
-        </div>
-
-        <div class="section">
-            <h2>Education</h2>
-            <ul class="education-timeline">
-                <li>
-                    <span class="year">2024-28</span>
-                    <span class="college">Dhemaji Engineering College, India</span>
-                </li>
-                <li>
-                    <span class="year">2020-22</span>
-                    <span class="college">Ajmal Super 40, Hojai, Assam</span>
-                </li>
-            </ul>
-
-        </div>
-
-        <hr>
-
-        <div class="section projects-wrapper">
-            <h2>Projects</h2>
-            <div class="projects">
-                <div class="project">
-                    <div class="thumbnail-wrapper">
-                        <img src="/assets/project1.webp" alt="PashaPuma Design Thumbnail">
-                    </div>
-                    <h3>PashaPuma Design</h3>
-                    <p>PashaPuma Design is a custom-built website created with HTML, CSS, JavaScript, and homemade
-                        MD3-inspired UI elements for the web. It showcases creative icon packs,
-                        wallpapers, and templates, along with guides on mobile customization.
-                        <a href="https://pashapumadesign.com/" target="_blank">Visit Site</a>
-                    </p>
+        <main>
+            <!-- ABOUT SECTION -->
+            <section id="about" class="reveal">
+                <div class="section-header">
+                    <span class="mono index">00.</span>
+                    <h2>About Me</h2>
                 </div>
-                <div class="project">
-                    <div class="thumbnail-wrapper">
-                        <img src="/assets/project2.webp" alt="WhatsApp Analyzer Thumbnail">
+                <article class="content-block">
+                    <p>I'm a full-stack web developer. When I'm not doing my academic work, I enjoy programming and
+                        exploring new technologies.</p>
+                    <p>I have a solid foundation in the core web stack. Here is my tech stack:</p>
+
+                    <div class="tech-stack">
+                        <span class="badge">HTML5</span>
+                        <span class="badge">CSS3</span>
+                        <span class="badge">JavaScript</span>
+                        <span class="badge">Bootstrap</span>
+                        <span class="badge">jQuery</span>
+                        <span class="badge">React</span>
+                        <span class="badge">C</span>
+                        <span class="badge">C++</span>
+                        <span class="badge">Java</span>
+                        <span class="badge">Python</span>
+                        <span class="badge">MySQL</span>
+                        <span class="badge">NodeJS</span>
+                        <span class="badge">Vercel</span>
+                        <span class="badge">Git</span>
+                        <span class="badge">GitHub</span>
                     </div>
-                    <h3>WhatChat Analyzer</h3>
-                    <p>This project is a chat analysis tool designed for analyzing WhatsApp chat logs exported as TXT
-                        files. Users can upload their chat files and view insights into message statistics, word and
-                        emoji usage, and activity trends. The tool processes chaotic text and presents it in a clear,
-                        user-friendly interface resembling a real WhatsApp chat. It is compatible with both iOS and
-                        Android versions of TXT files, offering seamless analysis across platforms.
-                        <a href="https://makibul.com/whatschat/" target="_blank">Visit Site</a>
-                    </p>
+                </article>
+            </section>
+
+            <!-- EDUCATION TIMELINE -->
+            <section id="education" class="reveal">
+                <div class="section-header">
+                    <span class="mono index">01.</span>
+                    <h2>Education</h2>
                 </div>
-                <div class="project">
-                    <div class="thumbnail-wrapper">
-                        <img src="/assets/project3.webp" alt="Attendance Tracker Thumbnail">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="time-col mono">2024 — 2028</div>
+                        <div class="info-col">
+                            <h3>Dhemaji Engineering College</h3>
+                            <span class="mono muted">B.Tech | CSE | India</span>
+                        </div>
                     </div>
-                    <h3>Personal Attendance Tracker</h3>
-                    <p>This tool is developed to help track your academic attendance. It features a dynamic calendar
-                        interface, allowing you to mark attendance for each subject, and
-                        easily navigate through different months. It includes functionalities like adding and removing
-                        subjects for specific dates, viewing subject-wise attendance stats, and maintaining data
-                        locally in the browser.
-                        <a href="https://attendance.makibul.com/" target="_blank">Visit Site</a>
-                    </p>
+                    <div class="timeline-item">
+                        <div class="time-col mono">2020 — 2022</div>
+                        <div class="info-col">
+                            <h3>Ajmal Super 40</h3>
+                            <span class="mono muted">12th | Hojai, Assam</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="project">
-                    <div class="thumbnail-wrapper">
-                        <img src="/assets/project4.webp" alt="UPI QR Generator Thumbnail">
+            </section>
+
+            <!-- PROJECTS SECTION -->
+            <section id="projects" class="reveal">
+                <div class="section-header">
+                    <span class="mono index">10.</span>
+                    <h2>Featured Projects</h2>
+                </div>
+
+
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <article class="project-card" data-tags="html css js ui design">
+                        <div class="window-header">
+                            <div class="win-btns"><span></span><span></span><span></span></div>
+                            <span class="mono title">pashapuma_design.exe</span>
+                        </div>
+                        <div class="project-thumb">
+                            <img src="https://makibul.com/assets/project1.webp" alt="PashaPuma Design"
+                                onerror="this.src='https://placehold.co/600x340/1a1a1a/6b8f6b?text=PashaPuma'">
+                        </div>
+                        <div class="project-body">
+                            <h3>PashaPuma Design</h3>
+                            <div class="meta-line mono">Material Design | Wallpaper app</div>
+                            <p class="desc-short">Custom-built website showcasing homemade MD3-inspired UI elements,
+                                icon packs, and wallpapers.</p>
+                            <!-- Hidden Full Description for Modal -->
+                            <div class="desc-full" hidden>
+                                PashaPuma Design is a custom-built website created with HTML, CSS, JavaScript, and
+                                homemade MD3-inspired UI elements for the web. It showcases creative icon packs,
+                                wallpapers, and templates, along with guides on mobile customization.
+                            </div>
+                            <a href="https://pashapumadesign.com/" target="_blank" class="hidden-link" hidden></a>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project-card" data-tags="tool js analytics whatsapp">
+                        <div class="window-header">
+                            <div class="win-btns"><span></span><span></span><span></span></div>
+                            <span class="mono title">whatchat_analyzer.py</span>
+                        </div>
+                        <div class="project-thumb">
+                            <img src="https://makibul.com/assets/project2.webp" alt="WhatChat Analyzer"
+                                onerror="this.src='https://placehold.co/600x340/1a1a1a/6b8f6b?text=Analyzer'">
+                        </div>
+                        <div class="project-body">
+                            <h3>WhatChat Analyzer</h3>
+                            <div class="meta-line mono">FileReader API | Analytics</div>
+                            <p class="desc-short">Chat analysis tool for parsing WhatsApp TXT logs to visualize
+                                statistics, emojis, and activity trends.</p>
+                            <div class="desc-full" hidden>
+                                Users can upload their chat files and view insights into message statistics, word and
+                                emoji usage, and activity trends. The tool processes chaotic text and presents it in a
+                                clear, user-friendly interface. Compatible with iOS and Android exports.
+                            </div>
+                            <a href="https://makibul.com/whatschat/" target="_blank" class="hidden-link" hidden></a>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="project-card" data-tags="productivity js localstorage tool">
+                        <div class="window-header">
+                            <div class="win-btns"><span></span><span></span><span></span></div>
+                            <span class="mono title">attendance_tracker.js</span>
+                        </div>
+                        <div class="project-thumb">
+                            <img src="https://makibul.com/assets/project3.webp" alt="Attendance Tracker"
+                                onerror="this.src='https://placehold.co/600x340/1a1a1a/6b8f6b?text=Tracker'">
+                        </div>
+                        <div class="project-body">
+                            <h3>Attendance Tracker</h3>
+                            <div class="meta-line mono">Calendar | LocalStorage</div>
+                            <p class="desc-short">Academic attendance tracking tool with a dynamic calendar interface
+                                and subject-wise stats.</p>
+                            <div class="desc-full" hidden>
+                                Features a dynamic calendar interface allowing you to mark attendance for each subject.
+                                Includes functionalities like adding/removing subjects, viewing stats, and maintaining
+                                data locally in the browser without a backend.
+                            </div>
+                            <a href="https://attendance.makibul.com/" target="_blank" class="hidden-link" hidden></a>
+                        </div>
+                    </article>
+
+                    <!-- Project 4 -->
+                    <article class="project-card" data-tags="utility tool qr payment">
+                        <div class="window-header">
+                            <div class="win-btns"><span></span><span></span><span></span></div>
+                            <span class="mono title">upi_gen.bin</span>
+                        </div>
+                        <div class="project-thumb">
+                            <img src="https://makibul.com/assets/project4.webp" alt="UPI QR Generator"
+                                onerror="this.src='https://placehold.co/600x340/1a1a1a/6b8f6b?text=QR+Gen'">
+                        </div>
+                        <div class="project-body">
+                            <h3>UPI QR Generator</h3>
+                            <div class="meta-line mono">QR Code API</div>
+                            <p class="desc-short">Simple tool for generating customizable UPI payment QR codes with
+                                logos and styles.</p>
+                            <div class="desc-full" hidden>
+                                A simple and customizable tool for generating UPI payment QR codes. It allows users to
+                                create QR codes with personalized styles, colors, and logos. Currently in active
+                                development.
+                            </div>
+                            <a href="https://makibul.com/upi/" target="_blank" class="hidden-link" hidden></a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- RECENT BLOGS -->
+            <section id="blogs" class="reveal" style="display: none;">
+                <div class="section-header">
+                    <span class="mono index">11.</span>
+                    <h2>Memory Dump</h2>
+                </div>
+                <div class="blog-grid">
+                    <article class="blog-item">
+                        <span class="mono date">2025-01-10</span>
+                        <h3>Optimizing DOM Manipulations</h3>
+                        <p class="mono excerpt">Reducing reflows and repaints in vanilla JavaScript applications...</p>
+                        <a href="#" class="read-more mono">READ_LOG -></a>
+                    </article>
+                    <article class="blog-item">
+                        <span class="mono date">2024-12-05</span>
+                        <h3>The State of CSS in 2025</h3>
+                        <p class="mono excerpt">Exploring new viewport units and container queries for responsive
+                            layouts...</p>
+                        <a href="#" class="read-more mono">READ_LOG -></a>
+                    </article>
+                </div>
+            </section>
+
+            <!-- CONTACT -->
+            <section id="contact" class="reveal">
+                <div class="section-header">
+                    <span class="mono index">11.</span>
+                    <h2>Contact</h2>
+                </div>
+                <div class="contact-box">
+                    <p>Have a project in mind? My inbox is open.</p>
+                    <a href="mailto:contactmakibul@gmail.com" class="btn-primary large"><img alt="email"
+                            src="https://makibul.com/assets/email.svg">Say Hello!</a>
+
+                    <div class="social-links">
+                        <a href="https://github.com/devMakibul" target="_blank" aria-label="GitHub"><img alt="github"
+                                src="https://makibul.com/assets/github.svg"></a>
+                        <a href="https://bsky.app/profile/makibul.com" target="_blank" aria-label="Bluesky"><img
+                                alt="bluesky" src="https://makibul.com/assets/bluesky.svg"></a>
+                        <a href="https://t.me/mak1bul" target="_blank" aria-label="Telegram"><img alt="telegram"
+                                src="https://makibul.com/assets/telegram.svg"></a>
+                        <a href="https://x.com/devMakibul" target="_blank" aria-label="X (Twitter)"><img alt="twitter-x"
+                                src="https://makibul.com/assets/x.svg"></a>
+                        <a rel="me" href="https://mastodon.social/@makibul" aria-label="Mastodon"><img alt="mastodon"
+                                src="https://makibul.com/assets/mastodon.svg"></a>
                     </div>
-                    <h3>UPI Custom QR Generator</h3>
-                    <p>This is a simple and customizable tool for generating UPI payment QR codes. It allows users to create QR codes with personalized styles, colors, and logos. It's in development.
-                        <a href="https://makibul.com/upi/" target="_blank">Visit Site</a>
-                    </p>
+                </div>
+            </section>
+
+            <!-- FOOTER -->
+            <footer>
+                <div class="divider"></div>
+                <div class="footer-content">
+                    <p class="mono copyright">© 2026 Makibul. All rights reserved.</p>
+                </div>
+                <div class="terminal-log mono" id="terminal-log">
+                    <span class="prompt">$</span> <span id="log-msg">System idle...</span>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <!-- PROJECT MODAL -->
+    <dialog id="project-modal" class="modal">
+        <div class="modal-content">
+            <div class="window-header">
+                <span class="mono title">viewer.exe</span>
+                <button class="close-modal" aria-label="Close Modal">✕</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image-wrapper">
+                    <img id="modal-img" src="" alt="Project Preview">
+                </div>
+                <div class="modal-details">
+                    <h2 id="modal-title">Project Title</h2>
+                    <div class="meta-line mono" id="modal-tags">HTML | CSS</div>
+                    <div class="divider-dashed"></div>
+                    <p id="modal-desc">Description goes here...</p>
+                    <a href="#" id="modal-link" target="_blank" class="btn-primary">Launch Live Demo</a>
                 </div>
             </div>
         </div>
+    </dialog>
 
-        <hr style="margin-top: 50px">
-
-        <footer>
-            <p class="social-links">
-                <a href="https://github.com/devMakibul" target="_blank"><img alt="github" src="/assets/github.svg"></a>
-                <a href="https://bsky.app/profile/makibul.com" target="_blank"><img alt="bluesky" src="/assets/bluesky.svg"></a>
-                <a href="https://t.me/mak1bul" target="_blank"><img alt="telegram" src="/assets/telegram.svg"></a>
-                <a href="https://x.com/devMakibul" target="_blank"><img alt="twitter-x" src="/assets/x.svg"></a>
-                <a rel="me" href="https://mastodon.social/@makibul"><img alt="mastodon" src="/assets/mastodon.svg"></a>
-                <a href="mailto:contactmakibul@gmail.com"><img alt="email" src="/assets/email.svg"></a>
-            </p>
-            <p>&copy; 2025 Makibul. All rights reserved.</p>
-        </footer>
-    </div>
+    <script src="https://makibul.com/script.js"></script>
 </body>
 
 </html>

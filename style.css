@@ -10,24 +10,23 @@
 :root {
     --bg: #18181b;
     --bg-transparent: rgba(24, 24, 27, 0);
-
     --card-bg: #27272a;
-
     --border: #52525b;
-
     --text-main: #fafafa;
-
     --text-muted: #a1a1aa;
-
     --cursor-ring: rgba(255, 255, 255, 0.5);
     --cursor-ring-hover: rgba(255, 255, 255, 0.9);
     --tag-bg: rgba(255, 255, 255, 0.08);
     --tag-bg-hover: rgba(255, 255, 255, 0.15);
     --hero-glow-1: rgba(245, 158, 11, 0.18);
-
     --hero-glow-2: rgba(99, 102, 241, 0.18);
-
     --invert: invert(1);
+
+    --project-1-bg: #1f2237;
+    --project-2-bg: #333336;
+    --project-3-bg: #414942;
+    --project-4-bg: #192c1d;
+    --project-5-bg: #3a3a3d;
 }
 
 [data-theme="light"] {
@@ -35,7 +34,6 @@
     --bg-transparent: rgba(250, 250, 250, 0);
     --card-bg: #ffffff;
     --border: #d4d4d8;
-
     --text-main: #09090b;
     --text-muted: #52525b;
     --cursor-ring: rgba(0, 0, 0, 0.4);
@@ -45,6 +43,12 @@
     --hero-glow-1: rgba(245, 158, 11, 0.12);
     --hero-glow-2: rgba(99, 102, 241, 0.12);
     --invert: invert(0);
+
+    --project-1-bg: #eef0ff;
+    --project-2-bg: #f0f0f0;
+    --project-3-bg: #edf5ee;
+    --project-4-bg: #e7fae9;
+    --project-5-bg: #eeeeee;
 }
 
 *,
@@ -184,14 +188,14 @@ body.cursor-hover .cursor-arrow svg path {
 }
 
 .preloader-label {
-    font-family: 'Unbounded', sans-serif;
+    font-family: 'PP Editorial New', serif;
     font-size: 0.75rem;
     letter-spacing: 0.3em;
     opacity: 0.3;
 }
 
 .preloader-counter {
-    font-family: 'Unbounded', sans-serif;
+    font-family: 'PP Editorial New', serif;
     font-size: clamp(4rem, 8vw, 8rem);
     font-weight: 700;
     letter-spacing: -0.02em;
@@ -199,7 +203,7 @@ body.cursor-hover .cursor-arrow svg path {
 }
 
 .preloader-bar-container {
-    width: 200px;
+    width: 140px;
     height: 1px;
     background-color: rgba(255, 255, 255, 0.15);
 }
@@ -538,7 +542,6 @@ nav {
     font-family: 'PP Editorial New', serif;
     font-size: clamp(2.5rem, 6vw, 4rem);
     font-weight: 400;
-    font-style: italic;
     color: var(--text-main);
 }
 
@@ -589,6 +592,26 @@ nav {
     border-radius: 12px;
 }
 
+.project-1 .project-images img {
+    background-color: var(--project-1-bg);
+}
+
+.project-2 .project-images img {
+    background-color: var(--project-2-bg);
+}
+
+.project-3 .project-images img {
+    background-color: var(--project-3-bg);
+}
+
+.project-4 .project-images img {
+    background-color: var(--project-4-bg);
+}
+
+.project-5 .project-images img {
+    background-color: var(--project-5-bg);
+}
+
 .project-info-wrapper {
     width: 40%;
     display: flex;
@@ -615,12 +638,7 @@ nav {
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    padding: 0.15rem 0.3rem 0.02rem;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    background-color: var(--tag-bg);
     color: var(--text-muted);
-    vertical-align: center;
     margin-right: 5px;
 }
 
@@ -749,6 +767,10 @@ nav {
     .project-images {
         width: 100%;
         margin-bottom: 2rem;
+    }
+
+    .project-images img {
+        border-radius: 15px;
     }
 
     .project-info-wrapper {

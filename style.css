@@ -7,6 +7,8 @@
     font-display: swap;
 }
 
+
+
 :root {
     --bg: #18181b;
     --bg-transparent: rgba(24, 24, 27, 0);
@@ -14,6 +16,8 @@
     --border: #52525b;
     --text-main: #fafafa;
     --text-muted: #a1a1aa;
+    --text-muted-2: #79797e;
+    --text-muted-3: #52525b;
     --cursor-ring: rgba(255, 255, 255, 0.5);
     --cursor-ring-hover: rgba(255, 255, 255, 0.9);
     --tag-bg: rgba(255, 255, 255, 0.08);
@@ -36,6 +40,8 @@
     --border: #d4d4d8;
     --text-main: #09090b;
     --text-muted: #52525b;
+    --text-muted-2: #878794;
+    --text-muted-3: #ceceda;
     --cursor-ring: rgba(0, 0, 0, 0.4);
     --cursor-ring-hover: rgba(0, 0, 0, 0.7);
     --tag-bg: rgba(0, 0, 0, 0.05);
@@ -61,14 +67,13 @@
 
 html {
     scroll-behavior: auto;
-
     font-size: 16px;
 }
 
 body {
     background-color: var(--bg);
     color: var(--text-main);
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
     transition: background-color 0s, color 0s;
@@ -167,7 +172,6 @@ body.cursor-hover .cursor-arrow svg path {
     right: 0;
     bottom: 0;
     background-color: #18181b;
-
     color: #fafafa;
     z-index: 9000;
     display: flex;
@@ -246,7 +250,6 @@ body.cursor-hover .cursor-arrow svg path {
 }
 
 .section-padding {
-
     padding: 120px max(5vw, calc((100% - 1400px) / 2));
     width: 100%;
     box-sizing: border-box;
@@ -326,7 +329,6 @@ nav {
 .section-name-viewport {
     overflow: hidden;
     height: 1em;
-
     transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -370,11 +372,10 @@ nav {
     display: none;
 }
 
+
 #hero {
     height: 100svh;
-
     height: var(--doc-height, 100vh);
-
     position: relative;
     overflow: visible;
     padding: 0 5vw;
@@ -437,7 +438,7 @@ nav {
     font-size: clamp(3.5rem, 8vw, 7.5rem);
     line-height: 0.93;
     font-weight: 400;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .hero-text h1 span {
@@ -445,9 +446,9 @@ nav {
 }
 
 .hero-text p {
-    font-size: 0.82rem;
-    color: var(--text-muted);
-    font-weight: 300;
+    font-size: 1.2rem;
+    color: var(--text-muted-2);
+    font-weight: 500;
     max-width: 320px;
 }
 
@@ -455,7 +456,6 @@ nav {
     position: absolute;
     right: 5vw;
     bottom: 30vh;
-
 }
 
 .portrait-placeholder {
@@ -667,10 +667,8 @@ nav {
 @media (min-width: 901px) {
     .project-info-wrapper {
         position: sticky;
-        bottom: 5vh;
+        top: 10vh;
         height: max-content;
-        align-self: flex-end;
-
     }
 }
 
@@ -723,8 +721,17 @@ nav {
 
 .project-body p {
     color: var(--text-muted);
-    font-size: 0.9rem;
+    font-size: 1.25rem;
     margin-bottom: 1.5rem;
+}
+
+.reveal-word {
+    color: var(--text-muted-3);
+    transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-word.active {
+    color: var(--text-muted);
 }
 
 .project-link {
@@ -810,7 +817,6 @@ nav {
         left: 0;
         width: 100%;
         height: 80px;
-
         background: linear-gradient(to bottom, var(--bg-transparent) 0%, var(--bg) 75%, var(--bg) 100%);
         pointer-events: none;
         z-index: -2;
@@ -883,7 +889,6 @@ nav {
 .stack-icon {
     width: 18px;
     height: 18px;
-
     filter: grayscale(100%) opacity(0.8) brightness(1.5);
     transition: filter 0.3s ease;
 }
@@ -902,7 +907,6 @@ nav {
 
 [data-theme="light"] .stack-icon {
     filter: grayscale(100%) opacity(0.8);
-
 }
 
 [data-theme="light"] .stack-tag:hover .stack-icon {
@@ -911,12 +915,12 @@ nav {
 
 [data-theme="light"] .stack-icon.invert-icon {
     filter: grayscale(100%) opacity(0.8);
-
 }
 
 [data-theme="light"] .stack-tag:hover .stack-icon.invert-icon {
     filter: grayscale(0%) opacity(1);
 }
+
 
 .timeline {
     border-left: 1px solid var(--border);
@@ -936,7 +940,6 @@ nav {
 .timeline-dot {
     position: absolute;
     left: calc(-2rem - 6px);
-
     top: 6px;
     width: 11px;
     height: 11px;
@@ -1071,6 +1074,7 @@ nav {
     align-items: center;
     gap: 1.5rem;
 }
+
 
 #menu-overlay {
     position: fixed;
@@ -1226,7 +1230,6 @@ nav {
     bottom: 0;
     width: 100%;
     height: 100%;
-
 }
 
 .fab-arrow {
